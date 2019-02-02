@@ -1,0 +1,497 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"invocationName": "movie critic",
+			"intents": [{
+					"name": "AMAZON.CancelIntent",
+					"slots": [],
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"slots": [],
+					"samples": []
+				},
+				{
+					"name": "AMAZON.NoIntent",
+					"slots": [],
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"slots": [],
+					"samples": []
+				},
+				{
+					"name": "AMAZON.YesIntent",
+					"slots": [],
+					"samples": []
+				},
+				{
+					"name": "RatingIntent",
+					"slots": [{
+						"name": "MovieName",
+						"type": "Movies"
+					}],
+					"samples": [
+						"give me the movie rating for {MovieName}",
+						"tell me the movie rating for {MovieName}",
+						"for the rating of {MovieName}",
+						"whats the rating for {MovieName}",
+						"give me the rating for {MovieName}",
+						"tell me the rating for {MovieName}",
+						"is {MovieName} worth watching"
+					]
+				},
+				{
+					"name": "RecommendIntent",
+					"slots": [{
+						"name": "Genre",
+						"type": "Genres"
+					}],
+					"samples": [
+						"recommend a movie",
+						"recommend a {Genre} movie",
+						"recommend an {Genre} movie",
+						"suggest a movie",
+						"suggest an {Genre} movie"
+					]
+				},
+				{
+					"name": "TellMeIntent",
+					"slots": [{
+						"name": "MovieName",
+						"type": "Movies"
+					}],
+					"samples": [
+						"tell me about {MovieName}",
+						"what is {MovieName} about",
+						"give me the synopsis for {MovieName}"
+					]
+				}
+			],
+			"types": [{
+					"name": "Movies",
+					"values": [{
+							"id": "",
+							"name": {
+								"value": "Fast and Furious",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Free Willy",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Finding Nemo",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Face/Off",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Erin Brockovich",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Evan Almighty",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Enchanted",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Enter the Dragon",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Don't Be A Menace To South Central While Drinking Your Juice In The Hood",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Deliverance",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Daddy Day Care",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Da Vinci Code",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Coneheads",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Chocolat",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Chicken Run",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Cabin Fever",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Bourne Identity",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Big Daddy",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Bad Santa",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Back to the Future",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Apollo 13",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "American Beauty",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Alpha Dog",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "Absence of Malice",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "10 Things I Hate About You",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "28 Weeks Later",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "28 Days Later",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "50 First Dates",
+								"synonyms": []
+							}
+						}
+					]
+				},
+				{
+					"name": "Genres",
+					"values": [{
+							"id": "",
+							"name": {
+								"value": "western",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "war",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "tv movie",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "thriller",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "suspense",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "sporting event",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "sports",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "science fiction",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "sci fi",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "romance",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "road",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "mystery",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "musical",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "music",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "indie",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "horror",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "holiday",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "history",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "film noir",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "fan film",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "family",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "eastern",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "drama",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "documentary",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "disaster",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "crime",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "comedy",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "anime",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "animation",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "adventure",
+								"synonyms": []
+							}
+						},
+						{
+							"id": "",
+							"name": {
+								"value": "action",
+								"synonyms": []
+							}
+						}
+					]
+				}
+			]
+		}
+	}
+}

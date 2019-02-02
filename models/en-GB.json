@@ -1,0 +1,70 @@
+{
+	"interactionModel": {
+		"languageModel": {
+			"intents": [{
+					"name": "AMAZON.CancelIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.HelpIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.NoIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.StopIntent",
+					"samples": []
+				},
+				{
+					"name": "AMAZON.YesIntent",
+					"samples": []
+				},
+				{
+					"name": "RatingIntent",
+					"samples": [
+						"give me the movie rating for {MovieName}",
+						"tell me the movie rating for {MovieName}",
+						"for the rating of {MovieName}",
+						"whats the rating for {MovieName}",
+						"give me the rating for {MovieName}",
+						"tell me the rating for {MovieName}",
+						"is {MovieName} worth watching"
+					],
+					"slots": [{
+						"name": "MovieName",
+						"type": "AMAZON.Movie"
+					}]
+				},
+				{
+					"name": "RecommendIntent",
+					"samples": [
+						"recommend a movie",
+						"recommend a {Genre} movie",
+						"recommend an {Genre} movie",
+						"suggest a movie",
+						"suggest an {Genre} movie"
+					],
+					"slots": [{
+						"name": "Genre",
+						"type": "AMAZON.Genre"
+					}]
+				},
+				{
+					"name": "TellMeIntent",
+					"samples": [
+						"tell me about {MovieName}",
+						"what is {MovieName} about",
+						"give me the synopsis for {MovieName}"
+					],
+					"slots": [{
+						"name": "MovieName",
+						"type": "AMAZON.Movie"
+					}]
+				}
+			],
+			"invocationName": "movie critic"
+		}
+	}
+}
