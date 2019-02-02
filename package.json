@@ -53,7 +53,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chearmstrong/skill-movie-critic.git"
+    "url": "https://github.com/chearmstrong/movie-critic.git"
   },
   "private": true
 }
