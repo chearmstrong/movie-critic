@@ -1,58 +1,59 @@
 {
-	"name": "skill-movie-critic",
-	"version": "2.1.1",
-	"description": "Get movie ratings, synopsis and suggestions from movie critic",
-	"scripts": {
-		"debug": "babel-node --debug-brk ./local-dev-test.js",
-		"deploy:dev": "sls deploy --stage dev --aws-profile personal",
-		"deploy:prod": "sls deploy --stage prod --aws-profile personal",
-		"update-models": "node ./models/update-models",
-		"test": "jest",
-		"debug:recommend:no-genre": "EVENT=recommendNoGenre node ./debug",
-		"debug:recommend:genre": "EVENT=recommendGenre node ./debug",
-		"debug:tell-me": "EVENT=tellMe node ./debug",
-		"lint": "eslint src",
-		"eclint:check": "eclint check",
-		"eclint:fix": "eclint fix"
-	},
-	"pre-commit": [
-		"lint"
-	],
-	"dependencies": {
-		"@babel/polyfill": "^7.2.5",
-		"ask-sdk": "^2.1.0",
-		"aws-sdk": "^2.339.0",
-		"dotenv": "^6.1.0",
-		"needle": "^2.2.4",
-		"safe-access": "^0.1.0"
-	},
-	"devDependencies": {
-		"@babel/cli": "^7.2.3",
-		"@babel/core": "^7.2.2",
-		"@babel/plugin-proposal-object-rest-spread": "^7.3.1",
-		"@babel/plugin-transform-destructuring": "^7.2.0",
-		"@babel/preset-env": "^7.3.1",
-		"babel-eslint": "^8.2.6",
-		"babel-jest": "^24.0.0",
-		"babel-loader": "^8.0.5",
-		"body-parser": "^1.18.3",
-		"eclint": "^2.8.0",
-		"eslint": "^4.19.1",
-		"eslint-config-airbnb": "^16.1.0",
-		"eslint-plugin-import": "^2.14.0",
-		"jest": "^24.0.0",
-		"pre-commit": "^1.2.2",
-		"serverless": "^1.32.0",
-		"serverless-webpack": "^4.2.0",
-		"virtual-alexa": "^0.6.14",
-		"webpack": "^3.10.0"
-	},
-	"main": "src/index.js",
-	"author": "Che Armstorng",
-	"license": "ISC",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/chearmstrong/skill-movie-critic.git"
-	},
-	"private": true
+  "name": "skill-movie-critic",
+  "version": "2.0.0",
+  "description": "Get movie ratings, synopsis and suggestions from movie critic",
+  "scripts": {
+    "deploy:dev": "sls deploy --stage dev --aws-profile personal",
+    "deploy:prod": "sls deploy --stage prod --aws-profile personal",
+    "update-models": "node ./models/update-models",
+    "release": "release",
+    "test": "jest",
+    "debug:recommend:no-genre": "EVENT=recommendNoGenre node ./debug",
+    "debug:recommend:genre": "EVENT=recommendGenre node ./debug",
+    "debug:tell-me": "EVENT=tellMe node ./debug",
+    "lint": "eslint src",
+    "eclint:check": "eclint check",
+    "eclint:fix": "eclint fix"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5",
+    "ask-sdk": "^2.1.0",
+    "aws-sdk": "^2.339.0",
+    "dotenv": "^6.1.0",
+    "needle": "^2.2.4",
+    "safe-access": "^0.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/plugin-transform-destructuring": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^8.2.6",
+    "babel-jest": "^24.0.0",
+    "babel-loader": "^8.0.5",
+    "body-parser": "^1.18.3",
+    "eclint": "^2.8.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^24.0.0",
+    "pre-commit": "^1.2.2",
+    "release": "^6.0.0",
+    "serverless": "^1.32.0",
+    "serverless-webpack": "^4.2.0",
+    "virtual-alexa": "^0.6.14",
+    "webpack": "^3.10.0"
+  },
+  "main": "src/index.js",
+  "author": "Che Armstorng",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chearmstrong/skill-movie-critic.git"
+  },
+  "private": true
 }
