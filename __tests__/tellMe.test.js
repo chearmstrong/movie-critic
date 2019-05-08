@@ -22,6 +22,7 @@ it('Should tell me about Aquaman', async () => {
 	const payload = await alexa.utter('what is aquaman about');
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
+	expect(payload).toHaveProperty('response.card');
 	expect(payload.response.outputSpeech.ssml).toContain('Once home to the most advanced civilization on Earth');
 });
 
@@ -33,6 +34,7 @@ it('Should tell me about The Grinch', async () => {
 	const payload = await alexa.utter('what is the grinch about');
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
+	expect(payload).toHaveProperty('response.card');
 	expect(payload.response.outputSpeech.ssml).toContain('The Grinch hatches a scheme to ruin Christmas');
 });
 
@@ -44,5 +46,6 @@ it('Should tell me about The Grinch', async () => {
 	const payload = await alexa.utter('what is the glass about');
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
+	expect(payload).toHaveProperty('response.card');
 	expect(payload.response.outputSpeech.ssml).toContain('In a series of escalating encounters');
 });

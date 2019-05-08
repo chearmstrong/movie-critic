@@ -22,6 +22,7 @@ it('Give me the rating for Aquaman', async () => {
 	const payload = await alexa.utter('give me the movie rating for aquaman');
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
+	expect(payload).toHaveProperty('response.card');
 	expect(payload.response.outputSpeech.ssml).toContain('the rating for aquaman is');
 });
 
@@ -33,6 +34,7 @@ it('Give me the rating for The Grinch', async () => {
 	const payload = await alexa.utter('give me the movie rating for the grinch');
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
+	expect(payload).toHaveProperty('response.card');
 	expect(payload.response.outputSpeech.ssml).toContain('the rating for the grinch is');
 });
 
@@ -44,5 +46,6 @@ it('Give me the rating for The Grinch', async () => {
 	const payload = await alexa.utter('give me the movie rating for the glass');
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
+	expect(payload).toHaveProperty('response.card');
 	expect(payload.response.outputSpeech.ssml).toContain('the rating for the glass is');
 });

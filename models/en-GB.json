@@ -1,70 +1,178 @@
 {
 	"interactionModel": {
-		"languageModel": {
-			"intents": [{
-					"name": "AMAZON.CancelIntent",
-					"samples": []
-				},
-				{
-					"name": "AMAZON.HelpIntent",
-					"samples": []
-				},
-				{
-					"name": "AMAZON.NoIntent",
-					"samples": []
-				},
-				{
-					"name": "AMAZON.StopIntent",
-					"samples": []
-				},
-				{
-					"name": "AMAZON.YesIntent",
-					"samples": []
-				},
-				{
-					"name": "RatingIntent",
-					"samples": [
-						"give me the movie rating for {MovieName}",
-						"tell me the movie rating for {MovieName}",
-						"for the rating of {MovieName}",
-						"whats the rating for {MovieName}",
-						"give me the rating for {MovieName}",
-						"tell me the rating for {MovieName}",
-						"is {MovieName} worth watching"
+			"languageModel": {
+					"invocationName": "movie critic",
+					"intents": [
+							{
+									"name": "AMAZON.CancelIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.HelpIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.NoIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.StopIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.YesIntent",
+									"samples": []
+							},
+							{
+									"name": "RatingIntent",
+									"slots": [
+											{
+													"name": "MovieName",
+													"type": "AMAZON.Movie"
+											},
+											{
+													"name": "MediaType",
+													"type": "MediaTypes"
+											}
+									],
+									"samples": [
+											"give me the {MediaType} rating for {MovieName}",
+											"tell me the {MediaType} rating for {MovieName}",
+											"for the rating of {MovieName}",
+											"whats the rating for {MovieName}",
+											"give me the rating for {MovieName}",
+											"tell me the rating for {MovieName}",
+											"is {MovieName} worth watching"
+									]
+							},
+							{
+									"name": "RecommendIntent",
+									"slots": [
+											{
+													"name": "Genre",
+													"type": "AMAZON.Genre"
+											},
+											{
+													"name": "ActionWord",
+													"type": "ActionWords"
+											},
+											{
+													"name": "MediaType",
+													"type": "MediaTypes"
+											},
+											{
+													"name": "Adverb",
+													"type": "Adverbs"
+											}
+									],
+									"samples": [
+											"{ActionWord} a {MediaType}",
+											"{ActionWord} a {Genre} {MediaType}",
+											"{ActionWord} an {Genre} {MediaType}",
+											"{ActionWord} a  {Adverb} {MediaType}",
+											"{ActionWord} a {Adverb} {Genre} {MediaType}",
+											"{ActionWord} an {Adverb} {Genre} {MediaType}"
+									]
+							},
+							{
+									"name": "TellMeIntent",
+									"slots": [
+											{
+													"name": "MovieName",
+													"type": "AMAZON.Movie"
+											}
+									],
+									"samples": [
+											"tell me about {MovieName}",
+											"what is {MovieName} about",
+											"give me the synopsis for {MovieName}"
+									]
+							},
+							{
+									"name": "AMAZON.NavigateHomeIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.PauseIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.ResumeIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.StartOverIntent",
+									"samples": []
+							},
+							{
+									"name": "AMAZON.FallbackIntent",
+									"samples": []
+							}
 					],
-					"slots": [{
-						"name": "MovieName",
-						"type": "AMAZON.Movie"
-					}]
-				},
-				{
-					"name": "RecommendIntent",
-					"samples": [
-						"recommend a movie",
-						"recommend a {Genre} movie",
-						"recommend an {Genre} movie",
-						"suggest a movie",
-						"suggest an {Genre} movie"
-					],
-					"slots": [{
-						"name": "Genre",
-						"type": "AMAZON.Genre"
-					}]
-				},
-				{
-					"name": "TellMeIntent",
-					"samples": [
-						"tell me about {MovieName}",
-						"what is {MovieName} about",
-						"give me the synopsis for {MovieName}"
-					],
-					"slots": [{
-						"name": "MovieName",
-						"type": "AMAZON.Movie"
-					}]
-				}
-			],
-			"invocationName": "movie critic"
-		}
+					"types": [
+							{
+									"name": "ActionWords",
+									"values": [
+											{
+													"name": {
+															"value": "recommend",
+															"synonyms": [
+																	"suggest",
+																	"nominate",
+																	"put forward",
+																	"propose"
+															]
+													}
+											}
+									]
+							},
+							{
+									"name": "MediaTypes",
+									"values": [
+											{
+													"name": {
+															"value": "movie",
+															"synonyms": [
+																	"moving picture",
+																	"picture",
+																	"feature film",
+																	"hollywood film",
+																	"theatrical release",
+																	"film"
+															]
+													}
+											}
+									]
+							},
+							{
+									"name": "Adverbs",
+									"values": [
+											{
+													"name": {
+															"value": "good",
+															"synonyms": [
+																	"enjoyable",
+																	"exciting",
+																	"delightful",
+																	"incredible",
+																	"fantastic",
+																	"brilliant",
+																	"amazing",
+																	"top notch",
+																	"terrific",
+																	"impressive",
+																	"decent",
+																	"wonderful",
+																	"superb",
+																	"good quality",
+																	"nice",
+																	"excellent"
+															]
+													}
+											}
+									]
+							}
+					]
+			}
 	}
 }

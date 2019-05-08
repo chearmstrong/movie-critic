@@ -19,10 +19,15 @@ it('Gets an action movie recommendation', async () => {
 		.mockResolvedValueOnce(getTrendingMovies.actionMovie)
 		.mockResolvedValueOnce(getMovieDetailed.actionMovie);
 
-	const payload = await alexa.utter('recommend an action movie');
+	const payload = await alexa.intend('RecommendIntent', {
+		ActionWord: 'recommend',
+		MediaType: 'movie',
+		Genre: 'action'
+	});
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
-	expect(payload.response.outputSpeech.ssml).toContain('for a good action movie');
+	expect(payload).toHaveProperty('response.card');
+	expect(payload.response.outputSpeech.ssml).toContain('For a good action movie');
 });
 
 it('Gets a comedy movie recommendation', async () => {
@@ -30,10 +35,15 @@ it('Gets a comedy movie recommendation', async () => {
 		.mockResolvedValueOnce(getTrendingMovies.comedyMovie)
 		.mockResolvedValueOnce(getMovieDetailed.comedyMovie);
 
-	const payload = await alexa.utter('recommend an comedy movie');
+	const payload = await alexa.intend('RecommendIntent', {
+		ActionWord: 'recommend',
+		MediaType: 'movie',
+		Genre: 'comedy'
+	});
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
-	expect(payload.response.outputSpeech.ssml).toContain('for a good comedy movie');
+	expect(payload).toHaveProperty('response.card');
+	expect(payload.response.outputSpeech.ssml).toContain('For a good comedy movie');
 });
 
 it('Gets a horror movie recommendation', async () => {
@@ -41,8 +51,13 @@ it('Gets a horror movie recommendation', async () => {
 		.mockResolvedValueOnce(getTrendingMovies.horrorMovie)
 		.mockResolvedValueOnce(getMovieDetailed.horrorMovie);
 
-	const payload = await alexa.utter('recommend an horror movie');
+	const payload = await alexa.intend('RecommendIntent', {
+		ActionWord: 'recommend',
+		MediaType: 'movie',
+		Genre: 'horror'
+	});
 
 	expect(payload).toHaveProperty('response.outputSpeech.ssml');
-	expect(payload.response.outputSpeech.ssml).toContain('for a good horror movie');
+	expect(payload).toHaveProperty('response.card');
+	expect(payload.response.outputSpeech.ssml).toContain('For a good horror movie');
 });
