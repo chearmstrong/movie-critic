@@ -37,7 +37,7 @@ module.exports = {
 			const response = `${responseStrings.tellMe.found(overview, movieName, additional)}`;
 
 			return responseBuilder
-				.withSimpleCard(`${movie.title} [${rating}/10]`, movie.overview)
+				.withSimpleCard(`${movie.title} [${rating}/10]`, movie.overview || 'No overview available.')
 				.speak(response)
 				.getResponse();
 		}

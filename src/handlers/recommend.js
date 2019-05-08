@@ -66,7 +66,7 @@ module.exports = {
 
 				// For devices without screens
 				return responseBuilder
-					.withSimpleCard(`${movie.title} [${rating}/10]`, movie.overview)
+					.withSimpleCard(`${movie.title} [${rating}/10]`, movie.overview || 'No overview available.')
 					.speak(response).getResponse();
 			}
 		}
