@@ -1,6 +1,6 @@
 {
   "name": "skill-movie-critic",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Get movie ratings, synopsis and suggestions from movie critic",
   "scripts": {
     "deploy:dev": "sls deploy --stage dev --aws-profile personal",
