@@ -1,10 +1,10 @@
 const Alexa = require('ask-sdk');
-const Helpers = require('./Helpers');
+const helpers = require('./helpers');
 const { SERVICE } = require('./config')();
 const { handlers, errorHandlers } = require('./handlers');
 const { requestInterceptors, responseInterceptors } = require('./interceptors');
 
-const TABLE_NAME = `${SERVICE}-${Helpers.getStage()}`;
+const TABLE_NAME = `${SERVICE}-${helpers.getStage()}`;
 
 module.exports.handler = (event, context, callback) => {
 	context.callbackWaitsForEmptyEventLoop = false; // eslint-disable-line no-param-reassign

@@ -1,3 +1,5 @@
+// TODO: Remove Class
+
 const { API } = require('../config')();
 const needle = require('needle');
 
