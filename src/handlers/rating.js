@@ -14,7 +14,6 @@ module.exports = {
 	handle: async ({ responseBuilder, requestEnvelope, attributesManager }) => { // eslint-disable-line space-before-function-paren
 		const movieName = requestEnvelope.request.intent.slots.MovieName.value;
 		const movie = await trakt.getMovie(movieName);
-		let response = `${responseStrings.rating.notFound}`;
 		const attributes = {};
 
 		if (movie) {
@@ -35,9 +34,15 @@ module.exports = {
 				additional = responseStrings.rating.additional.low;
 			}
 
-			response = `${responseStrings.rating.found(votes, movieName, rating, additional)}`;
+			const response = `${responseStrings.rating.found(votes, movieName, rating, additional)}`;
+
+			return responseBuilder
+				.withSimpleCard(`${movie.title} [${rating}/10]`, movie.overview)
+				.speak(response).getResponse();
 		}
 
-		return responseBuilder.speak(response).getResponse();
+		return responseBuilder
+			.speak(responseStrings.rating.notFound)
+			.getResponse();
 	}
 };
