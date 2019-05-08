@@ -1,10 +1,18 @@
+const R = require('ramda');
 const Trakt = require('../managers/Trakt');
 const states = require('../constants/states');
-const responseStrings = require('../resources/responseStrings');
+const { tellMe: responseStrings } = require('../resources/responseStrings');
 const { INTENT_REQUEST } = require('../constants/request-types');
 const { TELL_ME_INTENT } = require('../constants/intent-types');
 
 const trakt = new Trakt();
+
+const { high, med, low } = R.prop('additional', responseStrings);
+const getAddn = R.cond([
+	[R.lte(R.__, 5), R.always(low)],
+	[R.lte(R.__, 7), R.always(med)],
+	[R.T, R.always(high)]
+]);
 
 module.exports = {
 	canHandle: ({ requestEnvelope }) => (
@@ -12,29 +20,20 @@ module.exports = {
 		requestEnvelope.request.intent.name === TELL_ME_INTENT
 	),
 	handle: async ({ responseBuilder, requestEnvelope, attributesManager }) => { // eslint-disable-line space-before-function-paren
-		const movieName = requestEnvelope.request.intent.slots.MovieName.value;
+		const movieName = R.path(['request', 'intent', 'slots', 'MovieName', 'value'], requestEnvelope);
 		const movie = await trakt.getMovie(movieName);
 		const attributes = {};
 
 		if (movie) {
 			attributes.currentIntent = TELL_ME_INTENT;
-			attributes.currentMovie = movie;
 			attributes.state = states.INPROGRESS;
 
 			await attributesManager.setSessionAttributes(attributes);
 
 			const { rating: ratingRaw, overview } = movie;
 			const rating = Math.round(ratingRaw, 1);
-
-			let additional = responseStrings.tellMe.additional.high;
-
-			if (rating > 5 && rating <= 7) {
-				additional = responseStrings.tellMe.additional.med;
-			} else if (rating <= 5) {
-				additional = responseStrings.tellMe.additional.low;
-			}
-
-			const response = `${responseStrings.tellMe.found(overview, movieName, additional)}`;
+			const additional = getAddn(rating);
+			const response = `${responseStrings.found(overview, movieName, additional)}`;
 
 			return responseBuilder
 				.withSimpleCard(`${movie.title} [${rating}/10]`, movie.overview || 'No overview available.')
@@ -44,7 +43,7 @@ module.exports = {
 
 		// Not found
 		return responseBuilder
-			.speak(responseStrings.tellMe.notFound)
+			.speak(responseStrings.notFound)
 			.getResponse();
 	}
 };

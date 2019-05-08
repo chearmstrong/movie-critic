@@ -28,7 +28,6 @@ module.exports = {
 
 			if (movie) {
 				attributes.currentIntent = RECOMMEND_INTENT;
-				// attributes.currentMovie = movie;
 				attributes.state = states.INPROGRESS;
 
 				await attributesManager.setSessionAttributes(attributes);
@@ -73,7 +72,7 @@ module.exports = {
 
 		// Not found
 		return responseBuilder
-			.speak(responseStrings.recommend.notFound)
+			.speak(responseStrings.notFound)
 			.getResponse();
 	}
 };
