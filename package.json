@@ -48,7 +48,7 @@
     "serverless": "^1.44.1",
     "serverless-webpack": "^5.3.0",
     "virtual-alexa": "^0.7.2",
-    "webpack": "^3.10.0"
+    "webpack": "^4.33.0"
   },
   "main": "src/index.js",
   "author": "Che Armstorng",
