@@ -29,7 +29,7 @@
     "ytdl-core": "^0.29.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
+    "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/plugin-transform-destructuring": "^7.4.4",
