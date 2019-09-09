@@ -21,7 +21,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "ask-sdk": "^2.7.0",
-    "aws-sdk": "^2.521.0",
+    "aws-sdk": "^2.525.0",
     "dotenv": "^7.0.0",
     "needle": "^2.4.0",
     "ramda": "^0.26.1",
