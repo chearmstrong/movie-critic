@@ -35,10 +35,15 @@ module.exports = {
 			const additional = getAddn(rating);
 			const response = `${responseStrings.found(overview, movieName, additional)}`;
 
+			if (movie.poster) {
+				return responseBuilder
+					.withStandardCard(`${movie.title} [${rating}/10]`, movie.overview || 'No overview available.', movie.poster)
+					.speak(response).getResponse();
+			}
+
 			return responseBuilder
 				.withSimpleCard(`${movie.title} [${rating}/10]`, movie.overview || 'No overview available.')
-				.speak(response)
-				.getResponse();
+				.speak(response).getResponse();
 		}
 
 		// Not found

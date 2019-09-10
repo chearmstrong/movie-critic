@@ -7,6 +7,7 @@ custom:
     STAGE: ${opt:stage, 'dev'}
     TRAKT_CLIENT_ID: ${ssm:/trakt/clientId}
     TRAKT_CLIENT_SECRET: ${ssm:/trakt/clientSecret~true}
+    TMDB_API_KEY: ${ssm:/tmdb/apiKey~true}
   skillId: ${ssm:/alexa/skillId}
 
 provider:
