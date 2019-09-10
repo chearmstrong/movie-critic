@@ -17,7 +17,8 @@ beforeEach(() => jest.resetAllMocks);
 it('Should tell me about Aquaman', async () => {
 	needle
 		.mockResolvedValueOnce(getMovie.actionMovie)
-		.mockResolvedValueOnce(getMovieDetailed.actionMovie);
+		.mockResolvedValueOnce(getMovieDetailed.actionMovie)
+		.mockResolvedValueOnce(null);
 
 	const payload = await alexa.utter('what is aquaman about');
 
@@ -29,7 +30,8 @@ it('Should tell me about Aquaman', async () => {
 it('Should tell me about The Grinch', async () => {
 	needle
 		.mockResolvedValueOnce(getMovie.comedyMovie)
-		.mockResolvedValueOnce(getMovieDetailed.comedyMovie);
+		.mockResolvedValueOnce(getMovieDetailed.comedyMovie)
+		.mockResolvedValueOnce(null);
 
 	const payload = await alexa.utter('what is the grinch about');
 
@@ -41,7 +43,8 @@ it('Should tell me about The Grinch', async () => {
 it('Should tell me about The Grinch', async () => {
 	needle
 		.mockResolvedValueOnce(getMovie.horrorMovie)
-		.mockResolvedValueOnce(getMovieDetailed.horrorMovie);
+		.mockResolvedValueOnce(getMovieDetailed.horrorMovie)
+		.mockResolvedValueOnce(null);
 
 	const payload = await alexa.utter('what is the glass about');
 

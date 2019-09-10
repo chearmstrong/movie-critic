@@ -7,8 +7,8 @@ const { apiKey, baseUrl, imageBaseUrl } = API.TMDB;
 const getMoviePoster = async (id) => {
 	const options = { json: true };
 	const url = `${baseUrl}/movie/${id}/images?api_key=${apiKey}&language=en`;
-	const { body: movie } = await needle('get', url, {}, options).catch(() => null);
-	const filePath = R.path(['posters', 0, 'file_path'], movie);
+	const response = await needle('get', url, {}, options).catch(() => null);
+	const filePath = R.path(['body', 'posters', 0, 'file_path'], response);
 
 	return filePath ? `${imageBaseUrl}/w300${filePath}` : null;
 };
