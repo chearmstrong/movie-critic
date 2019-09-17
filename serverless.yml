@@ -19,6 +19,8 @@ provider:
   memorySize: 256
   cfLogs: true
   logRetentionInDays: 90
+  iamManagedPolicies:
+    - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole # https://github.com/serverless/serverless/issues/6241
   iamRoleStatements:
     - Effect: Allow
       Action:
