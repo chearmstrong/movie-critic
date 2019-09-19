@@ -1,142 +1,138 @@
 [
-	{
-		"name": "action",
-		"slug": "action"
+  {
+    "name": "action",
+    "slug": "action"
+  },
+  {
+    "name": "adventure",
+    "slug": "adventure"
+  },
+  {
+    "name": "animation",
+    "slug": "animation"
 	},
 	{
-		"name": "adventure",
-		"slug": "adventure"
+    "name": "cartoon",
+    "slug": "animation"
+  },
+  {
+    "name": "anime",
+    "slug": "anime"
+  },
+  {
+    "name": "comedy",
+    "slug": "comedy"
+  },
+  {
+    "name": "crime",
+    "slug": "crime"
+  },
+  {
+    "name": "documentary",
+    "slug": "documentary"
+  },
+  {
+    "name": "drama",
+    "slug": "drama"
+  },
+  {
+    "name": "family",
+    "slug": "family"
 	},
 	{
-		"name": "animation",
-		"slug": "animation"
+    "name": "kids",
+    "slug": "family"
+  },
+  {
+    "name": "fantasy",
+    "slug": "fantasy"
+  },
+  {
+    "name": "history",
+    "slug": "history"
+  },
+  {
+    "name": "holiday",
+    "slug": "holiday"
 	},
 	{
-		"name": "anime",
-		"slug": "anime"
+    "name": "christmas",
+    "slug": "holiday"
+  },
+  {
+    "name": "horror",
+    "slug": "horror"
+  },
+  {
+    "name": "music",
+    "slug": "music"
+  },
+  {
+    "name": "musical",
+    "slug": "musical"
+  },
+  {
+    "name": "mystery",
+    "slug": "mystery"
+  },
+  {
+    "name": "romance",
+    "slug": "romance"
+  },
+  {
+    "name": "science fiction",
+    "slug": "science-fiction"
 	},
 	{
-		"name": "comedy",
-		"slug": "comedy"
+    "name": "science-fiction",
+    "slug": "science-fiction"
 	},
 	{
-		"name": "crime",
-		"slug": "crime"
+    "name": "sci fi",
+    "slug": "science-fiction"
 	},
 	{
-		"name": "disaster",
-		"slug": "disaster"
+    "name": "sci-fi",
+    "slug": "science-fiction"
 	},
 	{
-		"name": "documentary",
-		"slug": "documentary"
+    "name": "scifi",
+    "slug": "science-fiction"
+  },
+  {
+    "name": "short",
+    "slug": "short"
+  },
+  {
+    "name": "sporting event",
+    "slug": "sporting-event"
+  },
+  {
+    "name": "superhero",
+    "slug": "superhero"
 	},
 	{
-		"name": "drama",
-		"slug": "drama"
+    "name": "super hero",
+    "slug": "superhero"
+  },
+  {
+    "name": "suspense",
+    "slug": "suspense"
+  },
+  {
+    "name": "thriller",
+    "slug": "thriller"
+  },
+  {
+    "name": "war",
+    "slug": "war"
+  },
+  {
+    "name": "western",
+    "slug": "western"
 	},
 	{
-		"name": "eastern",
-		"slug": "eastern"
-	},
-	{
-		"name": "family",
-		"slug": "family"
-	},
-	{
-		"name": "fan film",
-		"slug": "fan-film"
-	},
-	{
-		"name": "fantasy",
-		"slug": "fantasy"
-	},
-	{
-		"name": "film noir",
-		"slug": "film-noir"
-	},
-	{
-		"name": "history",
-		"slug": "history"
-	},
-	{
-		"name": "holiday",
-		"slug": "holiday"
-	},
-	{
-		"name": "horror",
-		"slug": "horror"
-	},
-	{
-		"name": "indie",
-		"slug": "indie"
-	},
-	{
-		"name": "music",
-		"slug": "music"
-	},
-	{
-		"name": "musical",
-		"slug": "musical"
-	},
-	{
-		"name": "mystery",
-		"slug": "mystery"
-	},
-	{
-		"name": "road",
-		"slug": "road"
-	},
-	{
-		"name": "romance",
-		"slug": "romance"
-	},
-	{
-		"name": "science fiction",
-		"slug": "science-fiction"
-	},
-	{
-		"name": "sci fi",
-		"slug": "science-fiction"
-	},
-	{
-		"name": "sci-fi",
-		"slug": "science-fiction"
-	},
-	{
-		"name": "scifi",
-		"slug": "science-fiction"
-	},
-	{
-		"name": "short",
-		"slug": "short"
-	},
-	{
-		"name": "sports",
-		"slug": "sports"
-	},
-	{
-		"name": "sporting event",
-		"slug": "sporting-event"
-	},
-	{
-		"name": "suspense",
-		"slug": "suspense"
-	},
-	{
-		"name": "thriller",
-		"slug": "thriller"
-	},
-	{
-		"name": "tv movie",
-		"slug": "tv-movie"
-	},
-	{
-		"name": "war",
-		"slug": "war"
-	},
-	{
-		"name": "western",
-		"slug": "western"
-	}
+    "name": "coyboy",
+    "slug": "western"
+  }
 ]
