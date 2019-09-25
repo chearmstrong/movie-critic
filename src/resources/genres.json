@@ -1,5 +1,4 @@
-[
-  {
+[{
     "name": "action",
     "slug": "action"
   },
@@ -10,8 +9,8 @@
   {
     "name": "animation",
     "slug": "animation"
-	},
-	{
+  },
+  {
     "name": "cartoon",
     "slug": "animation"
   },
@@ -38,8 +37,8 @@
   {
     "name": "family",
     "slug": "family"
-	},
-	{
+  },
+  {
     "name": "kids",
     "slug": "family"
   },
@@ -54,8 +53,8 @@
   {
     "name": "holiday",
     "slug": "holiday"
-	},
-	{
+  },
+  {
     "name": "christmas",
     "slug": "holiday"
   },
@@ -82,20 +81,20 @@
   {
     "name": "science fiction",
     "slug": "science-fiction"
-	},
-	{
+  },
+  {
     "name": "science-fiction",
     "slug": "science-fiction"
-	},
-	{
+  },
+  {
     "name": "sci fi",
     "slug": "science-fiction"
-	},
-	{
+  },
+  {
     "name": "sci-fi",
     "slug": "science-fiction"
-	},
-	{
+  },
+  {
     "name": "scifi",
     "slug": "science-fiction"
   },
@@ -110,8 +109,8 @@
   {
     "name": "superhero",
     "slug": "superhero"
-	},
-	{
+  },
+  {
     "name": "super hero",
     "slug": "superhero"
   },
@@ -130,9 +129,8 @@
   {
     "name": "western",
     "slug": "western"
-	},
-	{
+  },
+  {
     "name": "coyboy",
     "slug": "western"
-  }
-]
+  }]
