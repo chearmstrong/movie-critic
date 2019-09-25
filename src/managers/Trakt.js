@@ -2,6 +2,7 @@
 
 const { API } = require('../config')();
 const needle = require('needle');
+const { getMoviePoster } = require('./Tmdb');
 
 // Any errors that are thrown will be picked up by the error handler.
 
@@ -29,6 +30,8 @@ module.exports = class Trakt {
 
 	async getMovieDetailed(id) {
 		const { body: movie } = await needle('get', `${this.baseUrl}/movies/${id}`, { extended: 'full' }, this.options);
+
+		movie.poster = await getMoviePoster(movie.ids.tmdb);
 
 		return movie;
 	}

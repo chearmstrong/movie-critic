@@ -7,6 +7,7 @@ custom:
     STAGE: ${opt:stage, 'dev'}
     TRAKT_CLIENT_ID: ${ssm:/trakt/clientId}
     TRAKT_CLIENT_SECRET: ${ssm:/trakt/clientSecret~true}
+    TMDB_API_KEY: ${ssm:/tmdb/apiKey~true}
   skillId: ${ssm:/alexa/skillId}
 
 provider:
@@ -18,6 +19,8 @@ provider:
   memorySize: 256
   cfLogs: true
   logRetentionInDays: 90
+  iamManagedPolicies:
+    - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole # https://github.com/serverless/serverless/issues/6241
   iamRoleStatements:
     - Effect: Allow
       Action:

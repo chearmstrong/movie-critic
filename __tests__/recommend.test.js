@@ -17,7 +17,8 @@ beforeEach(() => jest.resetAllMocks);
 it('Gets an action movie recommendation', async () => {
 	needle
 		.mockResolvedValueOnce(getTrendingMovies.actionMovie)
-		.mockResolvedValueOnce(getMovieDetailed.actionMovie);
+		.mockResolvedValueOnce(getMovieDetailed.actionMovie)
+		.mockResolvedValueOnce(null);
 
 	const payload = await alexa.intend('RecommendIntent', {
 		ActionWord: 'recommend',
@@ -33,7 +34,8 @@ it('Gets an action movie recommendation', async () => {
 it('Gets a comedy movie recommendation', async () => {
 	needle
 		.mockResolvedValueOnce(getTrendingMovies.comedyMovie)
-		.mockResolvedValueOnce(getMovieDetailed.comedyMovie);
+		.mockResolvedValueOnce(getMovieDetailed.comedyMovie)
+		.mockResolvedValueOnce(null);
 
 	const payload = await alexa.intend('RecommendIntent', {
 		ActionWord: 'recommend',
@@ -49,7 +51,8 @@ it('Gets a comedy movie recommendation', async () => {
 it('Gets a horror movie recommendation', async () => {
 	needle
 		.mockResolvedValueOnce(getTrendingMovies.horrorMovie)
-		.mockResolvedValueOnce(getMovieDetailed.horrorMovie);
+		.mockResolvedValueOnce(getMovieDetailed.horrorMovie)
+		.mockResolvedValueOnce(null);
 
 	const payload = await alexa.intend('RecommendIntent', {
 		ActionWord: 'recommend',
