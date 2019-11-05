@@ -19,7 +19,7 @@
     "lint"
   ],
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
+    "@babel/polyfill": "^7.7.0",
     "ask-sdk": "^2.7.0",
     "aws-sdk": "^2.521.0",
     "dotenv": "^7.0.0",
