@@ -15,11 +15,7 @@
     "eclint:check": "eclint check",
     "eclint:fix": "eclint fix"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "dependencies": {
-    "@babel/polyfill": "^7.8.3",
     "ask-sdk": "^2.7.0",
     "aws-sdk": "^2.620.0",
     "dotenv": "^7.0.0",
@@ -33,6 +29,7 @@
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
     "@babel/plugin-transform-destructuring": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
@@ -41,9 +38,11 @@
     "eclint": "^2.8.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.20.1",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
-    "pre-commit": "^1.2.2",
+    "lint-staged": "^10.0.7",
     "release": "^6.1.0",
     "serverless": "^1.63.0",
     "serverless-webpack": "^5.3.1",
@@ -57,5 +56,19 @@
     "type": "git",
     "url": "https://github.com/chearmstrong/movie-critic.git"
   },
-  "private": true
+  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  }
 }
