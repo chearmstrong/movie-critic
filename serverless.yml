@@ -12,13 +12,13 @@ custom:
 
 provider:
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   stage: ${self:custom.stage}
   environment: ${self:custom.environment}
   region: eu-west-1
-  memorySize: 256
+  memorySize: 512
   cfLogs: true
-  logRetentionInDays: 90
+  logRetentionInDays: 7
   iamManagedPolicies:
     - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole # https://github.com/serverless/serverless/issues/6241
   iamRoleStatements:

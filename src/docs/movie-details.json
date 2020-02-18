@@ -2,23 +2,28 @@
   "type": "APL",
   "version": "1.0",
   "theme": "dark",
-  "import": [{
-    "name": "alexa-viewport-profiles",
-    "version": "1.0.0"
-  }],
-  "resources": [{
-    "description": "Icon asset URLs for transport control icon buttons",
-    "strings": {
-      "urlPlayIcon": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_play_default_72dp.png",
-      "urlPlayIconFocused": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_play_focused_72dp.png",
-      "urlPauseIcon": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_pause_default_72dp.png",
-      "urlPauseIconFocused": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_pause_focused_72dp.png"
+  "import": [
+    {
+      "name": "alexa-viewport-profiles",
+      "version": "1.0.0"
     }
-  }],
+  ],
+  "resources": [
+    {
+      "description": "Icon asset URLs for transport control icon buttons",
+      "strings": {
+        "urlPlayIcon": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_play_default_72dp.png",
+        "urlPlayIconFocused": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_play_focused_72dp.png",
+        "urlPauseIcon": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_pause_default_72dp.png",
+        "urlPauseIconFocused": "https://s3.us-east-2.amazonaws.com/ryanwagn-fluid-assets/ic_transport_pause_focused_72dp.png"
+      }
+    }
+  ],
   "styles": {
     "highEmphasisIconButton": {
       "description": "voice optimized icon button style - contained",
-      "values": [{
+      "values": [
+        {
           "backgroundColor": "rgba(#FAFAFA, .20)"
         },
         {
@@ -37,7 +42,8 @@
     },
     "lowEmphasisIconButton": {
       "description": "voice optimized icon button style - image",
-      "values": [{
+      "values": [
+        {
           "backgroundColor": "rgba(#EBEDED, .17)"
         },
         {
@@ -56,7 +62,8 @@
     },
     "playPauseToggleButtonPauseImage": {
       "description": "style for pause Image in the PlayPauseToggleButton layout",
-      "values": [{
+      "values": [
+        {
           "when": "${state.checked}",
           "opacity": "0"
         },
@@ -68,7 +75,8 @@
     },
     "playPauseToggleButtonPlayImage": {
       "description": "style for play Image in the PlayPauseToggleButton layout",
-      "values": [{
+      "values": [
+        {
           "when": "${state.checked}",
           "opacity": "1"
         },
@@ -80,7 +88,8 @@
     },
     "playPauseToggleButtonContainer": {
       "description": "style for the PlayPauseToggleButton",
-      "values": [{
+      "values": [
+        {
           "when": "${state.focused}",
           "opacity": "0"
         },
@@ -92,7 +101,8 @@
     },
     "playPauseToggleButtonContainerFocused": {
       "description": "style for the PlayPauseToggleButton - focused mode",
-      "values": [{
+      "values": [
+        {
           "when": "${state.focused}",
           "opacity": "1"
         },
@@ -105,11 +115,7 @@
   },
   "layouts": {
     "PlayPauseToggleButton": {
-      "parameters": [
-        "buttonSize",
-        "componentId",
-        "autoplay"
-      ],
+      "parameters": ["buttonSize", "componentId", "autoplay"],
       "item": {
         "type": "TouchWrapper",
         "id": "alexaPlayPauseToggleButton",
@@ -117,7 +123,8 @@
         "width": "${buttonSize}",
         "onPress": {
           "type": "Parallel",
-          "commands": [{
+          "commands": [
+            {
               "type": "SetState",
               "componentId": "alexaPlayPauseToggleButton",
               "state": "checked",
@@ -149,7 +156,8 @@
             "height": "${buttonSize}",
             "width": "${buttonSize}",
             "inheritParentState": true,
-            "items": [{
+            "items": [
+              {
                 "type": "Container",
                 "height": "${buttonSize}",
                 "width": "${buttonSize}",
@@ -157,7 +165,8 @@
                 "style": "playPauseToggleButtonContainer",
                 "id": "toggleButtonImages",
                 "position": "absolute",
-                "items": [{
+                "items": [
+                  {
                     "type": "Image",
                     "id": "toggleButtonPauseImage",
                     "position": "absolute",
@@ -191,7 +200,8 @@
                 "style": "playPauseToggleButtonContainerFocused",
                 "id": "toggleButtonImagesFocused",
                 "position": "absolute",
-                "items": [{
+                "items": [
+                  {
                     "type": "Image",
                     "id": "toggleButtonPauseImageFocused",
                     "position": "absolute",
@@ -224,64 +234,66 @@
     }
   },
   "mainTemplate": {
-    "parameters": [
-      "payload"
-    ],
-    "items": [{
-      "type": "Container",
-      "width": "100vw",
-      "height": "100vh",
-      "items": [{
-          "type": "Frame",
-          "width": "100vw",
-          "height": "20vh",
-          "backgroundColor": "black",
-          "item": {
-            "type": "Container",
+    "parameters": ["payload"],
+    "items": [
+      {
+        "type": "Container",
+        "width": "100vw",
+        "height": "100vh",
+        "items": [
+          {
+            "type": "Frame",
             "width": "100vw",
             "height": "20vh",
-            "alignItems": "center",
-            "justifyContent": "center",
-            "direction": "row",
-            "items": [{
-                "type": "Text",
-                "height": "20vh",
-                "textAlign": "center",
-                "textAlignVertical": "center",
-                "text": "${payload.currentView.properties.title}",
-                "fontSize": "5vw",
-                "fontWeight": "900",
-                "color": "#FFFFFF"
-              },
-              {
-                "type": "PlayPauseToggleButton",
-                "componentId": "myVideoPlayer",
-                "buttonSize": "10vh",
-                "autoplay": false
-              }
-            ]
-          }
-        },
-        {
-          "type": "Video",
-          "id": "myVideoPlayer",
-          "height": "80vh",
-          "width": "100vw",
-          "source": "${payload.currentView.properties.trailer}",
-          "onPlay": {
-            "type": "SetState",
-            "componentId": "alexaPlayPauseToggleButton",
-            "state": "checked",
-            "value": false
+            "backgroundColor": "black",
+            "item": {
+              "type": "Container",
+              "width": "100vw",
+              "height": "20vh",
+              "alignItems": "center",
+              "justifyContent": "center",
+              "direction": "row",
+              "items": [
+                {
+                  "type": "Text",
+                  "height": "20vh",
+                  "textAlign": "center",
+                  "textAlignVertical": "center",
+                  "text": "${payload.currentView.properties.title}",
+                  "fontSize": "5vw",
+                  "fontWeight": "900",
+                  "color": "#FFFFFF"
+                },
+                {
+                  "type": "PlayPauseToggleButton",
+                  "componentId": "myVideoPlayer",
+                  "buttonSize": "10vh",
+                  "autoplay": false
+                }
+              ]
+            }
           },
-          "onPause": {
-            "type": "SetState",
-            "componentId": "alexaPlayPauseToggleButton",
-            "state": "checked",
-            "value": true
+          {
+            "type": "Video",
+            "id": "myVideoPlayer",
+            "height": "80vh",
+            "width": "100vw",
+            "source": "${payload.currentView.properties.trailer}",
+            "onPlay": {
+              "type": "SetState",
+              "componentId": "alexaPlayPauseToggleButton",
+              "state": "checked",
+              "value": false
+            },
+            "onPause": {
+              "type": "SetState",
+              "componentId": "alexaPlayPauseToggleButton",
+              "state": "checked",
+              "value": true
+            }
           }
-        }
-      ]
-    }]
+        ]
+      }
+    ]
   }
 }

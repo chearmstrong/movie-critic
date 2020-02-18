@@ -1,4 +1,5 @@
-[{
+[
+  {
     "name": "action",
     "slug": "action"
   },
@@ -133,4 +134,5 @@
   {
     "name": "coyboy",
     "slug": "western"
-  }]
+  }
+]

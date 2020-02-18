@@ -1,3 +1,3 @@
 module.exports = {
-	INPROGRESS: '_INPROGRESS'
-};
+  INPROGRESS: '_INPROGRESS'
+}
