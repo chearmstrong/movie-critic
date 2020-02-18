@@ -11,9 +11,7 @@
     "debug:recommend:no-genre": "EVENT=recommendNoGenre node ./debug",
     "debug:recommend:genre": "EVENT=recommendGenre node ./debug",
     "debug:tell-me": "EVENT=tellMe node ./debug",
-    "lint": "eslint src",
-    "eclint:check": "eclint check",
-    "eclint:fix": "eclint fix"
+    "lint": "eslint src"
   },
   "dependencies": {
     "ask-sdk": "^2.7.0",
@@ -43,6 +41,7 @@
     "husky": "^4.2.3",
     "jest": "^24.9.0",
     "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
     "release": "^6.1.0",
     "serverless": "^1.63.0",
     "serverless-webpack": "^5.3.1",

@@ -8,7 +8,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
-  extends: ['airbnb/base', , 'prettier'],
+  extends: ['airbnb/base', 'prettier'],
   parser: 'babel-eslint',
   rules: {
     'no-multiple-empty-lines': [
@@ -33,7 +33,6 @@ module.exports = {
       }
     ],
     'prefer-const': [2],
-    'arrow-parens': [1, 'always'],
     'space-before-function-paren': [
       1,
       {
@@ -67,7 +66,6 @@ module.exports = {
       }
     ],
     'no-console': [0],
-    strict: [0],
-    'max-len': [0]
+    strict: [0]
   }
 }
