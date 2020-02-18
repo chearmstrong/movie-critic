@@ -23,7 +23,7 @@ jobs:
         run: npm run lint
       - name: Serverless deploy (DEV)
         uses: serverless/github-action@master
-        if: contains(${{ github.ref }}, 'develop')
+        if: contains(github.ref, 'develop')
         with:
           args: deploy --stage dev
         env:
@@ -31,7 +31,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       - name: Serverless deploy (PROD)
         uses: serverless/github-action@master
-        if: contains(${{ github.ref }}, 'master')
+        if: contains(github.ref, 'master')
         with:
           args: deploy --stage prod
         env:
