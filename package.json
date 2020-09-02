@@ -43,7 +43,7 @@
     "lint-staged": "^10.2.13",
     "prettier": "^1.19.1",
     "release": "^6.3.0",
-    "serverless": "^1.80.0",
+    "serverless": "^1.81.0",
     "serverless-webpack": "^5.3.4",
     "virtual-alexa": "^0.7.5",
     "webpack": "^3.10.0"
